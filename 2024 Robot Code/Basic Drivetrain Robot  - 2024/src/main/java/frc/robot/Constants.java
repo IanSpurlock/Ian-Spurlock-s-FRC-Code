@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import com.revrobotics.CANSparkLowLevel.MotorType;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -13,7 +15,19 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-  public static class OperatorConstants {
-    public static final int kDriverControllerPort = 0;
+  public static class InputConstants {
+    public static final int DRIVER_CONTROLLER_PORT = 0;
+  }
+
+  public static class DrivetrainConstants {
+    public static final int LEFT_1_DEVICE_ID = 2;
+    public static final int LEFT_2_DEVICE_ID = 2;
+    public static final int RIGHT_1_DEVICE_ID = 2;
+    public static final int RIGHT_2_DEVICE_ID = 2;
+
+    public static final MotorType DRIVETRAIN_MOTOR_TYPE = MotorType.kBrushless;
+
+    public static final Boolean IS_LEFT_INVERTED = true;
+    public static final Boolean IS_RIGHT_INVERTED = false;
   }
 }
