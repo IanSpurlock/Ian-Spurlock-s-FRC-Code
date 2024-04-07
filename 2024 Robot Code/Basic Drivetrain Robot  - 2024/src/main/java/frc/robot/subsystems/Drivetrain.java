@@ -17,19 +17,15 @@ public class Drivetrain extends SubsystemBase {
   private final CANSparkMax right1 = new CANSparkMax(DrivetrainConstants.RIGHT_1_DEVICE_ID, DrivetrainConstants.DRIVETRAIN_MOTOR_TYPE);
   private final CANSparkMax right2 = new CANSparkMax(DrivetrainConstants.RIGHT_2_DEVICE_ID, DrivetrainConstants.DRIVETRAIN_MOTOR_TYPE);
 
-  private final DifferentialDrive drive;
+  private final DifferentialDrive drive = new DifferentialDrive(left1, right1);
 
   public Drivetrain() {
     // Motor controller setup:
-    left1.setInverted(DrivetrainConstants.IS_LEFT_INVERTED);
-    left2.setInverted(DrivetrainConstants.IS_LEFT_INVERTED);
-    right1.setInverted(DrivetrainConstants.IS_RIGHT_INVERTED);
-    right2.setInverted(DrivetrainConstants.IS_RIGHT_INVERTED);
-    
     left2.follow(left1);
     right2.follow(right1);
 
-    drive = new DifferentialDrive(left1, right1);
+    left1.setInverted(DrivetrainConstants.IS_LEFT_INVERTED);
+    right1.setInverted(DrivetrainConstants.IS_RIGHT_INVERTED);
   }
   
   // Drive methods:

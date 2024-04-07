@@ -6,6 +6,8 @@ package frc.robot;
 
 import com.revrobotics.CANSparkLowLevel.MotorType;
 
+import edu.wpi.first.math.util.Units;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -19,6 +21,16 @@ public final class Constants {
     public static final int DRIVER_CONTROLLER_PORT = 0;
   }
 
+  /**
+   * Constants for trajectory tracking (kinematics and odometry), not basic drivetrain functionality.
+   */
+  public static class TrajectoryConstants {
+    public static final double TRACK_WIDTH = Units.inchesToMeters(28); // Distance between the wheels
+  }
+
+  /**
+   * Constants for basic drivetrain functionality, not trajectory tracking.
+   */
   public static class DrivetrainConstants {
     public static final int LEFT_1_DEVICE_ID = 2;
     public static final int LEFT_2_DEVICE_ID = 3;
