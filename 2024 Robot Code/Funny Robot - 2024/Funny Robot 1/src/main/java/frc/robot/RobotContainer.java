@@ -4,7 +4,6 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants.InputConstants;
 import frc.robot.subsystems.DrivetrainSubsystem;
 
@@ -25,6 +24,12 @@ public class RobotContainer {
     input.addController(DRIVER_PORT);
     
     input.setDriverController(DRIVER_PORT, drivetrain);
+    input.addBind(
+      DRIVER_PORT, // Controller port
+      InputManager.A, // Button
+      InputManager.WHILE_TRUE, // Condition
+      null // TODO: Add command
+    );
   }
 
   public DrivetrainSubsystem getDrivetrain() {
