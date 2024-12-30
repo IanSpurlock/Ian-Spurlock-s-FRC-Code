@@ -31,7 +31,7 @@ public class Handling {
      * NOTE: These values do not represent hard limits, but instead points of a linear function that describes the proportionality of the adjustment)
      * <p> 3. The inputs are multiplied by a value between 0 and 1, reducing speeds at all input values, which can improve speed control (FINAL_OUTPUT_REDUCTION_MULTIPLIER, 
      * NOTE: This value is subtracted from 1 before being multiplied)
-     * <p> The pros and cons of each adjustment are elaborated upon in the {@link HandlingConstants} JavaDoc. Also, there is a Desmos demo here: https://www.desmos.com/calculator/wjain3k5oa 
+     * <p> The pros and cons of each adjustment are elaborated upon in the {@link HandlingConstants} JavaDoc. Also, there is a Desmos demo here: https://www.desmos.com/calculator/ssemr6v2s9 
      * @param leftSpeed left input value
      * @param rightSpeed right input value
      * @return a two-element {@code double} array of the input values after being adjusted [left, right].
