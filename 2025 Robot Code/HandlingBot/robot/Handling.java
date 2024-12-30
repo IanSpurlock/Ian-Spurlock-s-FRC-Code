@@ -8,7 +8,7 @@ public class Handling {
      * All values should follow 0 <= x <= 1:
      * 
      * <p> {@link #INPUT_EXPONENTIAL_ADJUSTMENT}: The inputs are put to this power plus 1. More speed control at lower speeds, but less at higher speeds.
-     * <p> {@link #MINIMUM_ADJUSTMENT_FACTOR}: The minimum percent of adjustment. More handling, particularly at lower speeds, but reduced overall turning speeds.
+     * <p> {@link #MINIMUM_ADJUSTMENT_FACTOR}: The minimum percent of adjustment. More handling, particularly when turning, but reduced overall turning speeds.
      * <p> {@link #MAXIMUM_ADJUSTMENT_FACTOR}: The maximum percent of adjustment. More handling, but without much downside. 1 is recommended.
      * <p> {@link #FINAL_OUTPUT_REDUCTION_MULTIPLIER}: The final output is multiplied by 1 minus this value. More speed control, particularly at higher speeds, but reduced overall speeds.
      */
